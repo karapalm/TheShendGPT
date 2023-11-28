@@ -20,3 +20,5 @@
 #6: If you want to run it for a different game, create new test images for the CharacterNames folder and remove the old ones. It is very important that the resolution of your test images match the resolution that you capture from createScreenshots.py
 #:	I recommend using createScreenshots first and then getting your match images directly from those screenshots in order to avoid any resolution issues.
 #:	My biggest time-waste while working on this project was failing to realize when I was screenshotting from YT that it was stretching the resolution, it was a goofy mistake to make.
+
+#: Final result will look like Results.txt, will update if changes are made
