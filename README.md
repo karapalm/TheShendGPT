@@ -10,9 +10,9 @@
 #:	CharacterNames is where you want to save the character profile photo or designator image to. For 3s, I used the character name text.
 #:	If you use character portraits, you may have to flip the portraits for 2P side
 
-#4: Usage: 'python3 createScreenshots.py <URL to take 640p screenshots of in 30 second intervals>'
+#4: Usage: 'python3 createScreenshots.py <URL> <480p or 720p>'
 #:	This will take awhile. For a 3 hour video,it took roughly 13.5 minutes. The program will print how many thumbnails it is going to generate and you can look in the VideoSegments folder to see how far along it is.
-#:	Once it's done, move your screenshots to TestCases and run 'python3 findMatchups.py <URL> > Results.txt' 
+#:	Once it's done, move your screenshots to TestCases and run 'python3 findMatchups.py <URL> <480p or 720p> > Results.txt' 
 #:	I'm using > Results.txt to pipe it out to a text file which you can easily copy to google sheets or whatever.
 
 #5:	That's it. I'm not a software engineer, if you have recommendations for improvements feel free to reach out.

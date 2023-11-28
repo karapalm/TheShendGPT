@@ -4,7 +4,7 @@ import yt_dlp
 import sys #Only imported for argument handler so we can print the timestamped URLs
 startTimer = time.time()
 #from yt_dlp.utils import download_range_func
-
+quality = sys.argv[2]
 url=sys.argv[1]
 ydl_opts={}
 ydl=yt_dlp.YoutubeDL(ydl_opts)
@@ -16,7 +16,7 @@ screenshotCount = int(duration/30)
 print("Obtaining frames")
 print("Total number of screenshots to be taken:"+str(screenshotCount))
 for f in formats:
-    if f.get('format_note',None) == '480p':
+    if f.get('format_note',None) == quality:
         url = f.get('url',None)
         cap = cv2.VideoCapture(url)
         x=0

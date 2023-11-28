@@ -40,9 +40,22 @@ foundP1Threshold = 0
 minimumThreshold = 0.7
 printMatchup = False
 #Import all the character images, found it to be faster to load it into an array at the beginning rather than re-loading the image
-while i < len(characterCheck):
-    template.append(cv2.imread("./CharacterNames/"+characterCheck[i],cv2.IMREAD_GRAYSCALE))
-    i = i+1
+quality = sys.argv[2]
+if quality == '720p':
+    minimumThreshold = 0.6
+    while i < len(characterCheck):
+        img = cv2.imread("./CharacterNames/"+characterCheck[i],cv2.IMREAD_GRAYSCALE)
+        wid = int(img.shape[1]*1.5)
+        hei = int(img.shape[0]*1.5)
+        template.append(cv2.resize(img,(wid,hei)))
+        #cv2.imwrite("./CharacterNames/"+characterCheck[i]+"resized.png",template[i])
+        i = i+1
+elif quality=='480p':
+    while i < len(characterCheck):
+        template.append(cv2.imread("./CharacterNames/"+characterCheck[i],cv2.IMREAD_GRAYSCALE))
+        i = i+1
+else:
+    print('Warning: Only 480p & 720p have been tested')
 #Main loop for each Screenshot
 for pt in testFiles:
     img_rgb = cv2.imread("./TestCases/"+pt)
