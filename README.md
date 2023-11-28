@@ -1,4 +1,5 @@
 :README.md
+
 #1: TheShendGPT doesn't use any machine learning, it's a joke name to honor TheShend who has been a huge asset to the Street Fighter 3: 3rd Strike Community.
 
 #2: Required libs: cv2, yt_dlp, numpy. Written in Python
